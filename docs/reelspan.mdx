@@ -1,0 +1,45 @@
+---
+title: Reelspan
+---
+
+# Reelspan
+
+[Reelspan](https://reelspan.com) publishes videos, photos, text and PDFs to 22 social networks (TikTok, YouTube,
+Instagram, Facebook, X, Threads, LinkedIn, Pinterest, Bluesky, Reddit and more) from one API. This toolkit lets an
+agent publish, schedule, check results and read analytics.
+
+## Setup
+
+```bash
+pip install -U langchain-reelspan
+export REELSPAN_API_KEY="rs_live_..."
+```
+
+## Toolkit
+
+```python
+from langchain_reelspan import ReelspanToolkit
+
+tools = ReelspanToolkit(profile="acme").get_tools()
+```
+
+## Use in an agent
+
+```python
+from langchain.agents import create_agent
+
+agent = create_agent("anthropic:claude-sonnet-5-5", tools)
+agent.invoke({"messages": [{"role": "user", "content": "Post 'We shipped dark mode' to X and LinkedIn."}]})
+```
+
+## Tools
+
+| Tool | What it does |
+|---|---|
+| `reelspan_list_profiles` | Profiles and connected networks |
+| `reelspan_publish_video` / `_photos` / `_text` | Publish or schedule |
+| `reelspan_post_status`, `reelspan_retry_post`, `reelspan_post_history` | After posting |
+| `reelspan_scheduled_posts`, `reelspan_cancel_scheduled_post` | The schedule |
+| `reelspan_analytics`, `reelspan_post_analytics`, `reelspan_best_times` | Analytics |
+
+`read_only=True` keeps only the tools that read.
