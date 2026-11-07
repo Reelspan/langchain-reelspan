@@ -2,7 +2,7 @@
 
 [LangChain](https://python.langchain.com) and LangGraph tools for [Reelspan](https://reelspan.com). Let an agent
 publish videos, photos and text to TikTok, YouTube, Instagram, Facebook, X, Threads, LinkedIn, Pinterest, Bluesky,
-Reddit and 12 more networks, schedule them, check each network's result and read analytics.
+Reddit and more, schedule them, check each network's result and read analytics.
 
 ```bash
 pip install langchain-reelspan

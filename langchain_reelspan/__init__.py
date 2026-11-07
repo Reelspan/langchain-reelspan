@@ -1,4 +1,4 @@
-"""LangChain integration for Reelspan: publish to 22 social networks from an agent."""
+"""LangChain integration for Reelspan: publish to every major social network from an agent."""
 
 from .toolkit import ReelspanToolkit
 from .tools import (
