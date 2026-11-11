@@ -11,7 +11,7 @@ from reelspan import Reelspan, ReelspanError
 
 PLATFORMS = (
     "tiktok", "youtube", "instagram", "facebook", "x", "threads", "linkedin", "pinterest", "bluesky", "reddit",
-    "google_business", "telegram", "discord", "slack", "mastodon", "lemmy", "devto", "hashnode",
+    "google_business", "telegram", "discord", "slack", "mastodon", "devto", "hashnode",
     "wordpress", "sandbox",
 )
 
